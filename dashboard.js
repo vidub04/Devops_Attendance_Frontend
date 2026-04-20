@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const enrolmentNumber = localStorage.getItem("enrolment_number");
+  const enrolmentNumber = localStorage.getItem("Enrollment_Number");
 
   if (!enrolmentNumber) {
     window.location.href = "index.html";
