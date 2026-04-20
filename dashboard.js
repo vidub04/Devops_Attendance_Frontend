@@ -3,10 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("Dashboard enrolmentNumber:", enrolmentNumber);
 
   if (!enrolmentNumber) {
-    alert("No enrolment found in localStorage");
+    alert("No student logged in");
     window.location.href = "index.html";
     return;
   }
+
   function updateCards(data) {
     document.getElementById("totalClasses").textContent = data.total;
     document.getElementById("attended").textContent = data.attended;
@@ -78,11 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
       );
 
       const data = await response.json();
-
-      if (!data.success) {
-        alert(data.error || "Could not fetch student dashboard");
-        return;
-      }
+      console.log("Dashboard API response:", data);
 
       loadDashboard(data);
     } catch (error) {
