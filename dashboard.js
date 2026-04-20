@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const enrolmentNumber = localStorage.getItem("Enrollment_Number");
+  const enrolmentNumber = localStorage.getItem("enrolment_number");
+  console.log("Dashboard enrolmentNumber:", enrolmentNumber);
 
   if (!enrolmentNumber) {
+    alert("No enrolment found in localStorage");
     window.location.href = "index.html";
     return;
   }
-
   function updateCards(data) {
     document.getElementById("totalClasses").textContent = data.total;
     document.getElementById("attended").textContent = data.attended;
