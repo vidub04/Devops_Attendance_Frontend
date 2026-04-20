@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
   async function fetchDashboard() {
     try {
       const response = await fetch(
-        `https://your-fastapi-backend-url.onrender.com/student-dashboard/${enrolmentNumber}`
+        `https://devops-attendance-backend-8pri.onrender.com/student-dashboard/${enrolmentNumber}`
       );
 
       const data = await response.json();
