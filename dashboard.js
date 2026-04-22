@@ -1,3 +1,8 @@
+const data = await response.json();
+console.log("Response:", data);
+alert(data.message || data.error);
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const enrolmentNumber = localStorage.getItem("enrolment_number");
   console.log("Dashboard enrolmentNumber:", enrolmentNumber);
