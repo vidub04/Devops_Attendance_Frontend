@@ -24,7 +24,7 @@ function login(event) {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            enrolment: parseInt(enrolment),
+            enrolment: enrolment,
             password: password
         })
     })
