@@ -99,4 +99,35 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   fetchDashboard();
+  const markBtn = document.getElementById("markAttendanceBtn");
+
+if (markBtn) {
+  markBtn.addEventListener("click", async () => {
+    try {
+      const response = await fetch(
+        "https://devops-attendance-backend-8pri.onrender.com/mark-attendance",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            enrollment_number: enrolmentNumber,
+            name: localStorage.getItem("student_name")
+          })
+        }
+      );
+
+      const data = await response.json();
+      alert(data.message);
+
+      // refresh dashboard
+      fetchDashboard();
+
+    } catch (err) {
+      console.error(err);
+      alert("Error marking attendance");
+    }
+  });
+}
 });
