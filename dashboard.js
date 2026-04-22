@@ -131,8 +131,6 @@ if (markBtn) {
     }
   });
 
-  const data = await response.json();
-console.log("Response:", data);
-alert(data.message || data.error);
+  
 }
 });
