@@ -113,7 +113,7 @@ if (markBtn) {
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            enrollment_number: enrolmentNumber,
+           enrolment_number: enrolmentNumber,
             name: localStorage.getItem("student_name")
           })
         }
