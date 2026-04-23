@@ -112,14 +112,14 @@ if (markBtn) {
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            enrollment_number: enrolmentNumber,
+           enrolment_number: enrolmentNumber,
             name: localStorage.getItem("student_name")
           })
         }
       );
 
       const data = await response.json();
-      alert(data.message);
+     alert(data.message || data.error);
 
       // refresh dashboard
       fetchDashboard();
