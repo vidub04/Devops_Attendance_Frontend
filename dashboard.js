@@ -120,7 +120,7 @@ if (markBtn) {
       );
 
       const data = await response.json();
-      alert(data.message);
+     alert(data.message || data.error);
 
       // refresh dashboard
       fetchDashboard();
