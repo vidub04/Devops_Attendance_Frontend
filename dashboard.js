@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   const enrolmentNumber = localStorage.getItem("enrolment_number");
   console.log("Dashboard enrolmentNumber:", enrolmentNumber);
